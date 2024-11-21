@@ -1,9 +1,11 @@
 /* Apply Poppins font globally */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    
     margin: 0;
     padding: 0;
   }
+  
   
   /* Navbar styles */
   .navbar {
@@ -40,6 +42,7 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 400;
+    font-weight: bold;    /*text bold*/
   }
   
   .nav-links a:hover {
@@ -126,3 +129,15 @@ body {
       display: none;
     }
   }
+  .language-btn button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .language-btn button:hover {
+    background-color: #f0f0f0;
+  }
+  

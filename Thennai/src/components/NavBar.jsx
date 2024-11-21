@@ -26,9 +26,11 @@ const NavBar = () => {
         {/* Middle Section: Navigation Links for Larger Screens */}
         <div className="nav-links">
           <a href="/farming-community">Home</a>
+          <a href="/products">About Us</a>
+          <a href="/products">Products</a>
           <a href="/farming-guide">Farming Guide</a>
           <a href="/live-prices">Live Prices</a>
-          <a href="/products">Products</a>
+          
         </div>
 
         {/* Right Section: Contact Us Button */}

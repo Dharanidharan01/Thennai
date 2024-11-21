@@ -1,0 +1,62 @@
+.farming-guide {
+  padding: 40px 20px;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color : #0090E1;
+}
+
+.guide-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.guide-header p {
+  font-size: 18px;
+  color: #4CAF50;
+}
+
+.guide-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Default gap for the first line */
+}
+
+.guide-steps .guide-card {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.guide-steps .guide-card:hover {
+  transform: translateY(-5px);
+}
+
+.guide-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.guide-steps .guide-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.guide-steps .guide-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Specific spacing adjustment for the second line */
+.guide-steps:nth-child(2) {
+  gap: 10px; /* Reduced gap for the second line */
+}

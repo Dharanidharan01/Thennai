@@ -1,0 +1,50 @@
+.coconut-price-graph {
+  padding: 40px 20px;
+}
+
+.graph-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.graph-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0090E1; /* Blue accent */
+  margin-bottom: 10px;
+}
+
+.graph-header p {
+  font-size: 18px;
+  color: #555;
+}
+
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.line-chart,
+.pie-chart {
+  width: 100%;
+  max-width: 600px; /* Makes charts larger */
+  height: 400px; /* Ensures adequate size for interaction */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .chart-container {
+    flex-wrap: nowrap; /* Side-by-side layout on larger screens */
+  }
+
+  .line-chart,
+  .pie-chart {
+    width: 45%; /* Maintain proportional size */
+  }
+}
