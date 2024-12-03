@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+
 const AboutUs = () => {
   const [text, setText] = useState("");
   const fullText = `  At Thennai, we’re dedicated to supporting coconut 
@@ -46,26 +47,28 @@ generations.`;
           {text}
         </p>
 
-        {/* Key Points */}
-        <ul className="space-y-4 text-lg text-gray-600 mb-8">
-          {[
-            "Access to real-time market prices for better decision-making",
-            "Comprehensive farming guides for sustainable practices",
-            "A platform to connect and discuss with a like-minded community"
-          ].map((point, index) => (
-            <li
-              key={index}
-              className="flex items-center transition-all duration-300 hover:text-green-600 hover:shadow-lg p-2 rounded"
-            >
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/9282/9282598.png"
-                alt="Point"
-                className="w-4 h-4 mr-2"
-              />
-              {point}
-            </li>
-          ))}
-        </ul>
+        {/* Key Values at Thennai */}
+<ul className="space-y-4 text-lg text-gray-600 mb-8">
+  {[
+    "Integrity: Upholding honesty, ethics, and transparency in all we do.",
+    "Collaboration: Sharing skills and knowledge to grow and succeed together.",
+    "Innovation: Embracing creativity and continuous improvement to stay ahead.",
+    "Accountability: Taking pride and responsibility for our work and outcomes."
+  ].map((value, index) => (
+    <li
+      key={index}
+      className="flex items-center transition-all duration-300 hover:text-green-600 hover:shadow-lg p-2 rounded"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/9282/9282598.png"
+        alt="Key Value"
+        className="w-4 h-4 mr-2"
+      />
+      {value}
+    </li>
+  ))}
+</ul>
+  
 
         {/* Button */}
         <button className="w-full lg:w-auto bg-[#007A5C] text-white px-8 py-3 text-lg rounded hover:bg-[#00663D] transition-colors duration-300">

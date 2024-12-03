@@ -4,9 +4,11 @@ import NavBar from "../components/NavBar";
 import AboutUs from "../components/AboutUs";
 import ProductSection from "../components/ProductSection";
 import FarmingGuide from "../components/FarmingGuide";
-import CoconutPriceGraph from "../components/CoconutPriceGraph";
 import BenefitsOfCoconut from "../components/BenefitsOfCoconut";
 import FromTheBlog from "../components/FromTheBlog";
+import TamilNaduMap from "../components/TamilNaduMap";
+import ContactUs from "../components/ContactUs";
+import Footer from "../components/Footer";
 
 
 const HomePage = () => {
@@ -14,14 +16,16 @@ const HomePage = () => {
     <div>
       <NavBar />
       <SuperHeader />
-      <AboutUs/>
-      <ProductSection /> 
+      <AboutUs />
+      <ProductSection />
       <FarmingGuide />
-      <br></br>
-      <CoconutPriceGraph />
+      <br />
       <BenefitsOfCoconut />
       <FromTheBlog/>
-     
+      <TamilNaduMap/>
+      <ContactUs/>
+      <Footer/>
+      
     </div>
   );
 };

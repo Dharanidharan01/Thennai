@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": { "name": "Tiruppur" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[77.3, 11], [77.5, 11.2], [77.4, 11.4], [77.2, 11.2], [77.3, 11]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "name": "Pollachi" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[77, 10.6], [77.2, 10.8], [77.1, 11], [76.9, 10.8], [77, 10.6]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "name": "Chennai" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[80.2, 13], [80.3, 13.1], [80.4, 13.2], [80.1, 13.1], [80.2, 13]]]
+        }
+      }
+    ]
+  }
+  
