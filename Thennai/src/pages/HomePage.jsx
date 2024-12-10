@@ -10,6 +10,7 @@ import TamilNaduMap from "../components/TamilNaduMap";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import Popup from "../components/Popup";
 
 
 
@@ -28,7 +29,7 @@ const HomePage = () => {
       <ContactUs/>
       <Footer/>
       <WhatsAppButton/>
-     
+     <Popup/>
       
     </div>
   );
