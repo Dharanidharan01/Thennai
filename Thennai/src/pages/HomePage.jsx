@@ -9,6 +9,8 @@ import FromTheBlog from "../components/FromTheBlog";
 import TamilNaduMap from "../components/TamilNaduMap";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
+
 
 
 const HomePage = () => {
@@ -25,6 +27,8 @@ const HomePage = () => {
       <TamilNaduMap/>
       <ContactUs/>
       <Footer/>
+      <WhatsAppButton/>
+     
       
     </div>
   );

@@ -4,7 +4,6 @@ import "../components/TamilNaduMap.css";
 import tamilNaduImage from "../assets/temple.png";
 import keralaImage from "../assets/kerala.png";
 import andhraImage from "../assets/ap.png";
-import gujaratImage from "../assets/gujarath.png";
 import karnatakaImage from "../assets/karnataka.png";
 
 const TamilNaduMap = () => {
@@ -15,7 +14,6 @@ const TamilNaduMap = () => {
     { name: "Kerala", image: keralaImage , route: "/kerala" },
     { name: "Karnataka", image: karnatakaImage , route: "/kar" },
     { name: "Andhra Pradesh", image: andhraImage, route: "/ap"  },
-    { name: "Gujarat", image: gujaratImage },
   ];
 
   const handleCardClick = (route) => {

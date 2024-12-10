@@ -13,26 +13,24 @@ const TamilNadu = () => {
 
   return (
     <div className="tamilnadu-page">
-      <h1 className="tamilnadu-heading">Tamil Nadu Coconut Prices</h1>
+      <h1 className="tamilnadu-heading">தமிழ்நாடு நாட்டு முந்திய கோபிகரி விலைகள்</h1>
       <p className="tamilnadu-subheading">
-        Discover the coconut price trends in Tamil Nadu over the past years.
-        Explore real-time prices and understand the factors influencing the
-        market.
+        கடந்த ஆண்டுகளில் தமிழ்நாட்டில் கோபிகரி விலைகளின் போக்குகள் பற்றி அறியவும். நேரடி விலைகளை ஆராயவும் மற்றும் சந்தையில் எதனை தாக்குபட்ட காரணிகள் புரிந்து கொள்ளவும்.
       </p>
       <div className="tamilnadu-content">
         <div className="tamilnadu-image">
-          <img src={tamilNaduImage} alt="Tamil Nadu" />
+          <img src={tamilNaduImage} alt="தமிழ்நாடு" />
           <p className="image-description">
-            Tamil Nadu, known for its rich coconut plantations and high yield.
+            தமிழ்நாடு, அதன் வளமான கோபிகரி தோட்டங்கள் மற்றும் உயர் விளைச்சலுக்குப் பெயரளித்தது.
           </p>
         </div>
         <div className="tamilnadu-table-container">
-          <h2>Price History</h2>
+          <h2>விலை வரலாறு</h2>
           <table className="price-history-table">
             <thead>
               <tr>
-                <th>Year</th>
-                <th>Price</th>
+                <th>ஆண்டு</th>
+                <th>விலை</th>
               </tr>
             </thead>
             <tbody>
@@ -51,24 +49,23 @@ const TamilNadu = () => {
               rel="noopener noreferrer"
               className="realtime-button"
             >
-              View Real-Time Coconut Prices
+              நேரடி கோபிகரி விலைகள் பார்க்கவும்
             </a>
           </div>
         </div>
       </div>
       <div className="additional-info">
-        <h2>Factors Influencing Coconut Prices</h2>
+        <h2>கோபிகரின் விலைகளை பாதிக்கும் காரணிகள்</h2>
         <ul>
-          <li>Climate conditions and seasonal changes</li>
-          <li>Export demands and global coconut market trends</li>
-          <li>Local demand for coconut-based products</li>
-          <li>Government policies on agriculture and subsidies</li>
+          <li>வானிலை நிலைகள் மற்றும் பருவ மாற்றங்கள்</li>
+          <li>ஏற்றுமதி கோரிக்கைகள் மற்றும் உலக கோபிகரி சந்தை போக்குகள்</li>
+          <li>கோபிகரி சார்ந்த தயாரிப்புகளுக்கான உள்ளூர் கோரிக்கை</li>
+          <li>அரசு வேளாண்மை கொடுப்பனவுகள் மற்றும் கொள்கைகள்</li>
         </ul>
         <div className="fun-fact">
-          <h3>Did You Know?</h3>
+          <h3>அரசியலோடு தெரியுமா?</h3>
           <p>
-            Tamil Nadu is the second-largest producer of coconuts in India,
-            contributing significantly to the nation's agriculture economy.
+            தமிழ்நாடு இந்தியாவில் கோபிகரின் இரண்டாவது பெரிய உற்பத்தியாளர் ஆகும், இது நாட்டின் வேளாண் பொருளாதாரத்திற்கு முக்கிய பங்களிப்பு அளிக்கிறது.
           </p>
         </div>
       </div>

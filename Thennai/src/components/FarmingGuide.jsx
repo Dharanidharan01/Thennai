@@ -1,7 +1,10 @@
 import React from "react";
 import "../components/farmingGuide.css";
+import { useNavigate } from "react-router-dom"; 
 
 const FarmingGuide = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const guideSteps = [
     {
       title: "Land Preparation",
@@ -42,6 +45,12 @@ const FarmingGuide = () => {
         <h2>Farming Guide for Coconuts</h2>
         <p>Learn the essential steps to grow and maintain healthy coconut plantations.</p>
       </div>
+      
+
+
+{/* Know More Button */}
+
+
       <div className="guide-steps">
         {guideSteps.map((step, index) => (
           <div className="guide-card" key={index}>
@@ -50,6 +59,16 @@ const FarmingGuide = () => {
             <p>{step.description}</p>
           </div>
         ))}
+      </div>
+
+      {/* "Know More" Button */}
+      <div className="know-more-btn-container">
+        <button
+          className="know-more-btn"
+          onClick={() => navigate("fg")} // Navigate to the 'fg' page
+        >
+          Know More
+        </button>
       </div>
     </section>
   );

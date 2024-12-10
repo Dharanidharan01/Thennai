@@ -14,25 +14,25 @@ const blogPosts = [
     title: "Coconut Water: Nature's Best Drink",
     description: "Discover the amazing health benefits of coconut water, from hydration to boosting immunity.",
     image: coconutFoodImage, // Use imported image
-    link: "#",
+    link: "https://medium.com/@thennai/coconut-water-natures-best-drink-206d3b922e10",
   },
   {
     title: "How Coconut Oil Supports Your Skin Health",
     description: "Learn how coconut oil helps maintain youthful and glowing skin naturally.",
     image: coconutoilImage, // Use imported image
-    link: "#",
+    link: "https://medium.com/@thennai/how-coconut-oil-supports-your-skin-health-6273573a2b21",
   },
   {
     title: "5 Surprising Health Benefits of Coconuts",
     description: "Coconuts are packed with essential nutrients that can enhance your health in numerous ways.",
     image: coconutcareImage, // Use imported image
-    link: "#",
+    link: "https://medium.com/@thennai/1-boosts-heart-health-f30b6d4fde51",
   },
   {
     title: "The Role of Coconut in Traditional Cooking",
     description: "Explore how coconut is used in various traditional recipes around the world.",
     image: coconutmilkImage, // Use imported image
-    link: "#",
+    link: "https://medium.com/@thennai/the-role-of-coconut-in-traditional-cooking-dbad103763c4",
   }
 ];
 

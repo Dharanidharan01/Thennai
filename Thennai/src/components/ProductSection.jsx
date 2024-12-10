@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import '../components/product.css';
+import "../components/product.css";
+
+// Import the .webp image
+import ProductGif from "../assets/giphy.webp";
 
 // Loading spinner component
 const LoadingSpinner = () => (
@@ -36,6 +39,12 @@ const ProductSection = () => {
     };
   }, []);
 
+  const products = [
+    "Palm tree harvesting tool",
+    "Agro-EV (multi-purpose)",
+    "Product 3",
+  ];
+
   return (
     <section
       id="product-section"
@@ -50,16 +59,16 @@ const ProductSection = () => {
     >
       {/* Heading and Paragraph */}
       <div style={{ width: "100%", marginBottom: "40px" }}>
-      <h2
-  style={{
-    fontSize: "36px",
-    fontWeight: "bold",
-    marginBottom: "20px",
-    color: "#0090E1"
-  }}
->
-  Featured Products
-</h2>
+        <h2
+          style={{
+            fontSize: "36px",
+            fontWeight: "bold",
+            marginBottom: "20px",
+            color: "#0090E1",
+          }}
+        >
+          Featured Products
+        </h2>
 
         <p style={{ fontSize: "18px", color: "#555" }}>
           Discover our wide range of coconut-based products
@@ -67,7 +76,7 @@ const ProductSection = () => {
       </div>
 
       {/* Product Cards */}
-      {["Product 1", "Product 2", "Product 3"].map((product, index) => (
+      {products.map((product, index) => (
         <div
           key={index}
           className="product-card"
@@ -83,7 +92,7 @@ const ProductSection = () => {
             transform: isVisible ? "translateX(0)" : "translateX(-200px)",
             opacity: isVisible ? 1 : 0,
             transition: "all 1s ease-in-out",
-            perspective: "1000px",  // For 3D effect
+            perspective: "1000px", // For 3D effect
           }}
         >
           <div
@@ -93,11 +102,12 @@ const ProductSection = () => {
               justifyContent: "center",
               alignItems: "center",
               position: "relative",
-              transformStyle: "preserve-3d",  // Preserve 3D space for the flip
+              transformStyle: "preserve-3d", // Preserve 3D space for the flip
               transition: "transform 0.6s", // Duration for flip effect
             }}
             className="card-inner"
           >
+            {/* Front face */}
             <div
               style={{
                 position: "absolute",
@@ -109,25 +119,26 @@ const ProductSection = () => {
               <LoadingSpinner />
             </div>
 
-            {/* Back face for flipped card */}
+            {/* Back face with .webp image */}
             <div
               style={{
                 position: "absolute",
                 backfaceVisibility: "hidden",
                 width: "100%",
                 height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
-                color: "#fff",
-                transform: "rotateY(180deg)",
-                fontSize: "24px",
-                fontWeight: "bold",
-                textAlign: "center",
+                transform: "rotateY(180deg)", // Rotate for flip effect
               }}
             >
-              Coming Soon
+              <img
+                src={ProductGif}
+                alt="Product Animation"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "10px",
+                  objectFit: "cover",
+                }}
+              />
             </div>
           </div>
 

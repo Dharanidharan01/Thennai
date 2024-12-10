@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLeaf, FaHeart, FaWater, FaSeedling, FaBacon, FaSmile, FaShieldAlt, FaCogs } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import '../components/BenifitsOfCoconut.css';
 
 const BenefitsOfCoconut = () => {
@@ -58,6 +59,7 @@ const BenefitsOfCoconut = () => {
   return (
     <div className="benefits-container">
       <h2 className="benefits-title">Benefits of Coconut</h2>
+      
       <div className="benefits-cards">
         {benefits.map((benefit, index) => (
           <motion.div
@@ -74,6 +76,13 @@ const BenefitsOfCoconut = () => {
             <p className="card-description">{benefit.description}</p>
           </motion.div>
         ))}
+      </div>
+
+      {/* Know More Button */}
+      <div className="know-more-button-container">
+        <Link to="/BenefitsOfCoconut" className="know-more-button">
+          Know More
+        </Link>
       </div>
     </div>
   );

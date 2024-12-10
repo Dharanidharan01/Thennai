@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import video from '../assets/header_video.mp4'
 
 const SuperHeader = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -17,7 +18,7 @@ const SuperHeader = () => {
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
         <video
-          src="src/assets/header_video.mp4"
+          src={video}
           autoPlay
           loop
           muted
@@ -62,22 +63,29 @@ const SuperHeader = () => {
 
           {/* Call to Action with Parallax */}
           <a
-            href="/get-started"
-            className="inline-block bg-[#0090E1] text-white px-6 md:px-8 lg:px-10 py-3 md:py-4 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl font-bold shadow-lg hover:bg-[#007bc2] transition-all duration-300 mt-4 md:mt-6 lg:mt-8"
-            style={{
-              transform: `translateY(${offsetY * 0.2}px)`,
-              transition: "transform 0.1s ease-out, background-color 0.3s ease, box-shadow 0.3s ease",
-              willChange: "transform",
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = `translateY(${offsetY * 0.1}px)`;
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = `translateY(${offsetY * 0.1}px)`;
-            }}
-          >
-            Get Started
-          </a>
+  className="inline-block bg-[#0090E1] text-white px-6 md:px-8 lg:px-10 py-3 md:py-4 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl font-bold shadow-lg hover:bg-[#007bc2] transition-all duration-300 mt-4 md:mt-6 lg:mt-8"
+  style={{
+    transform: `translateY(${offsetY * 0.2}px)`,
+    transition: "transform 0.1s ease-out, background-color 0.3s ease, box-shadow 0.3s ease",
+    willChange: "transform",
+  }}
+  onClick={() => {
+    window.scrollBy({
+      top: 700, // Scrolls down by 100px
+      left: 0,   // No horizontal scroll
+      behavior: 'smooth', // Smooth scrolling animation
+    });
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.transform = `translateY(${offsetY * 0.1}px)`;
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.transform = `translateY(${offsetY * 0.1}px)`;
+  }}
+>
+  Get Started
+</a>
+
         </div>
       </div>
     </section>

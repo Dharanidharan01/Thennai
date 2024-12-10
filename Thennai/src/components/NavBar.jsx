@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './NavBar.css';
+import logo from '../assets/logo.png' ;
 
 const NavBar = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -16,7 +17,7 @@ const NavBar = () => {
         {/* Left Section: Logo */}
         <div className="navbar-logo">
           <img
-            src="src/assets/logo.png" // Replace with the actual logo path
+            src={logo} // Replace with the actual logo path
             alt="Logo"
             className="logo-image"
           />
