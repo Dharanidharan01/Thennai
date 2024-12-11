@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon
 const WhatsAppButton = () => {
   // Function to open WhatsApp help bot link
   const openWhatsApp = () => {
-    const phoneNumber = "8608825725"; // Replace with your WhatsApp phone number
+    const phoneNumber = "918608825725"; // Replace with your WhatsApp phone number
     const message = "Hello! How can I assist you today?"; // The message that the bot receives
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
