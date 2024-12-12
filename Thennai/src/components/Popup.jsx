@@ -20,7 +20,9 @@ const Popup = () => {
   };
 
   return (
+    
     isVisible && (
+      
       <div className="popup-overlay">
         <div className="popup-container animate-popup">
           <h2 className="popup-heading">Choose Your Language</h2>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import html2pdf from 'html2pdf.js';
 import { Sprout, Droplets, Beaker, Bug, Scissors } from 'lucide-react';
+import logo from '../../assets/logo.png';
 
 const FarmingGuide1 = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -92,15 +93,34 @@ const FarmingGuide1 = () => {
       margin: 1,
       filename: 'coconut-farming-guide.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
+      html2canvas: { scale: 2, useCORS: true },
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
     };
     html2pdf().set(opt).from(content).save();
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8" id="farming-guide-content">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-50 p-8" id="farming-guide-content" style={{ position: 'relative' }}>
+      {/* Multiple Watermarks */}
+      {[...Array(20)].map((_, index) => (
+        <img
+          key={index}
+          src={logo}
+          alt="Watermark"
+          style={{
+            position: 'absolute',
+            top: `${Math.random() * 100}%`, // Random vertical position
+            left: `${Math.random() * 100}%`, // Random horizontal position
+            transform: 'translate(-50%, -50%)',
+            opacity: 0.1, // Adjust opacity as needed
+            zIndex: 0, // Ensure it stays behind the content
+            width: '10%', // Adjust size of the watermark logos
+            pointerEvents: 'none', // Prevent interaction with the watermark
+          }}
+        />
+      ))}
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold text-[#4CAF50] mb-12 text-center font-['Space_Grotesk']">
           Farming Guide for Coconuts
         </h1>
@@ -126,21 +146,14 @@ const FarmingGuide1 = () => {
                     </li>
                   ))}
                 </ul>
-                {expandedCard === index && (
-                  <div className="mt-6">
-                    <p className="text-gray-600 leading-relaxed">{step.details}</p>
-                  </div>
-                )}
-                <button
-                  className="mt-4 text-[#0090E1] hover:text-[#4CAF50] transition-colors"
-                  onClick={() => setExpandedCard(expandedCard === index ? null : index)}
-                >
-                  {expandedCard === index ? 'Show Less' : 'Learn More'}
-                </button>
+                <div className="mt-6">
+                  <p className="text-gray-600 leading-relaxed">{step.details}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
+
         <div className="mt-12 text-center">
           <button
             onClick={downloadPDF}

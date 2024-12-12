@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // Import Link for routing and useNavigate for programmatic navigation
 import './NavBar.css';
-import logo from '../../../assets/logo.png' ;
+import logo from '../../../assets/logo.png';
 
 const NavBarTamil = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  
-    const toggleSidebar = () => {
-      setSidebarOpen(!isSidebarOpen);
-    };
-  
+  const navigate = useNavigate();  // Initialize navigate to navigate programmatically
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleLanguageChange = (language) => {
+    if (language === 'english') {
+      navigate('/'); // Navigate to English homepage
+    } else if (language === 'tamil') {
+      navigate('/homepagetamil'); // Navigate to Tamil homepage
+    }
+  };
 
   return (
     <div>
@@ -21,22 +30,21 @@ const NavBarTamil = () => {
             alt="Logo"
             className="logo-image"
           />
-        <span className="logo-text"></span>
+          <span className="logo-text"></span>
         </div>
 
         {/* நடுவண் பகுதி: பெரிய திரைகளுக்கான நாவிகேஷன் இணைப்புகள் */}
         <div className="nav-links">
-          <a href="/farming-community">முகப்பு</a>
-          <a href="/products">எங்களை பற்றி</a>
-          <a href="/products">பொருட்கள்</a>
-          <a href="/farming-guide">விவசாய வழிகாட்டி</a>
-          <a href="/live-prices">செய்தி விலை</a>
-          
+          <Link to="/farming-community">முகப்பு</Link>
+          <Link to="/products">எங்களை பற்றி</Link>
+          <Link to="/products">பொருட்கள்</Link>
+          <Link to="/farming-guide">விவசாய வழிகாட்டி</Link>
+          <Link to="/live-prices">செய்தி விலை</Link>
         </div>
 
         {/* வலது பகுதி: எங்களை தொடர்பு கொள்ளும் பொத்தான் */}
         <div className="contact-btn">
-          <a href="/contact">எங்களை தொடர்பு கொள்ள</a>
+          <Link to="/contact">எங்களை தொடர்பு கொள்ள</Link>
         </div>
 
         {/* மொபைலுக்கான சுவிட்ச் பொத்தான் */}
@@ -52,23 +60,24 @@ const NavBarTamil = () => {
         </button>
         <ul className="sidebar-links">
           <li>
-            <a href="/farming-community">விவசாய சமூகம்</a>
+            <Link to="/farming-community">விவசாய சமூகம்</Link>
           </li>
           <li>
-            <a href="/farming-guide">விவசாய வழிகாட்டி</a>
+            <Link to="/farming-guide">விவசாய வழிகாட்டி</Link>
           </li>
           <li>
-            <a href="/live-prices">செய்தி விலை</a>
+            <Link to="/live-prices">செய்தி விலை</Link>
           </li>
           <li>
-            <a href="/products">பொருட்கள்</a>
+            <Link to="/products">பொருட்கள்</Link>
           </li>
           <li>
-            <a href="/contact">எங்களை தொடர்பு கொள்ள</a>
+            <Link to="/contact">எங்களை தொடர்பு கொள்ள</Link>
           </li>
         </ul>
       </div>
     </div>
   );
 };
+
 export default NavBarTamil;

@@ -5,30 +5,25 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        {/* Logo and About Section */}
-        
-
         {/* Quick Links Section */}
         <div className="footer-section footer-links">
-          <h3>Quick Links</h3>
+          <h3 style={{ color: "black" }}>Quick Links</h3>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+            <li><a href="/services">Products</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="https://thennai.medium.com/">Blog</a></li>
           </ul>
         </div>
 
         {/* Contact Info Section */}
         <div className="footer-section footer-contact">
-          <h3>Contact Us</h3>
-          <p>Email: info@thennai.co.in</p>
-          <p>Phone: +91 86088 25725 
-          </p>
-          <p>Address: THENNAI TECH PRIVATE LIMITED 
-85, Palaniappan street, 
-Pollachi, Coimbatore -642001 </p>
+          <h3 style={{ color: "black" }}>Contact Us</h3>
+          <p><a href="mailto:info@thennai.co.in" style={{ color: "white", textDecoration: "none" }}>Email: info@thennai.co.in</a></p>
+          <p><a href="tel:+918608825725" style={{ color: "white", textDecoration: "none" }}>Phone: +91 86088 25725</a></p>
+          <p style={{ color: "white" }}> Address: THENNAI TECH Pvt Ltd<br />
+            85, Palaniappan street, <br />
+            Pollachi, Coimbatore - 642001</p>
         </div>
 
         {/* Newsletter Subscription Section */}

@@ -4,3 +4,10 @@
 
 @tailwind utilities;
 
+/* Prevent text selection globally */
+* {
+    user-select: none;
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none;    /* For Firefox */
+  }
+  

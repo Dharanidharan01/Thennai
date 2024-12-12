@@ -1,75 +1,109 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
-import logo from '../assets/logo.png' ;
+import logo from '../assets/logo.png';
 
 const NavBar = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
-  
+    const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
+    const navigate = useNavigate();
+
     const toggleSidebar = () => {
-      setSidebarOpen(!isSidebarOpen);
+        setSidebarOpen(!isSidebarOpen);
     };
-  
 
-  return (
-    <div>
-      {/* Navbar */}
-      <nav className="navbar">
-        {/* Left Section: Logo */}
-        <div className="navbar-logo">
-          <img
-            src={logo} // Replace with the actual logo path
-            alt="Logo"
-            className="logo-image"
-          />
-        <span className="logo-text"></span>
+    const toggleLanguageDropdown = () => {
+        setLanguageDropdownOpen(!isLanguageDropdownOpen);
+    };
+
+    const handleLanguageChange = (language) => {
+        if (language === 'english') {
+            navigate('/');
+        } else if (language === 'tamil') {
+            navigate('/homepagetamil');
+        }
+        setLanguageDropdownOpen(false);
+        setSidebarOpen(false); // close the sectioh
+    };
+
+    const handleNavigate = (route) => {
+        navigate(`/${route}`);
+        setSidebarOpen(false); // Close sidebar on navigation
+    };
+
+    const handleLogoClick = () => {
+        navigate('/'); // Navigate to the home page
+    };
+
+    return (
+        <div>
+            <nav className="navbar">
+                <div className="navbar-left">
+                    {/* Logo as a button for navigation */}
+                    <button onClick={handleLogoClick} className="logo-button">
+                        <img src={logo} alt="Logo" className="logo-image" />
+                    </button>
+                </div>
+
+                <div className="nav-links">
+                    <span onClick={() => handleNavigate('aboutus')}>About Us</span>
+                    <span onClick={() => handleNavigate('products')}>Products</span>
+                    <span onClick={() => handleNavigate('fg')}>Farming Guide</span>
+                    <span onClick={() => handleNavigate('tamilnadu')}>Live Prices</span>
+                </div>
+
+                <div className="contact-language">
+                    <Link to="contactus-header" smooth={true} offset={-70} duration={500} className="contact-btn">
+                        Contact Us
+                    </Link>
+                    <div className="language-btn" onClick={toggleLanguageDropdown}>
+                        Language
+                        {isLanguageDropdownOpen && (
+                            <div className="dropdown-menu">
+                                <ul>
+                                    <li onClick={() => handleLanguageChange('english')}>English</li>
+                                    <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+                <div className="toggle-btn" onClick={toggleSidebar}>
+                    ☰
+                </div>
+            </nav>
+
+            <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+                <button className="close-btn" onClick={toggleSidebar}>✖</button>
+                <ul className="sidebar-links">
+                    <li onClick={() => handleNavigate('aboutus')}>About Us</li>
+                    <li onClick={() => handleNavigate('products')}>Products</li>
+                    <li onClick={() => handleNavigate('fg')}>Farming Guide</li>
+                    <li onClick={() => handleNavigate('tamilnadu')}>Live Prices</li>
+                    <li>
+                        <Link to="contactus-header" smooth={true} offset={-70} duration={500} onClick={toggleSidebar}>
+                            Contact Us
+                        </Link>
+                    </li>
+                    <li className="sidebar-language">
+                        <div onClick={toggleLanguageDropdown} className="sidebar-language-btn">
+                            Language
+                        </div>
+                        {isLanguageDropdownOpen && (
+                            <div className="sidebar-dropdown-menu">
+                                <ul>
+                                    <li onClick={() => handleLanguageChange('english')}>English</li>
+                                    <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
+                                </ul>
+                            </div>
+                        )}
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        {/* Middle Section: Navigation Links for Larger Screens */}
-        <div className="nav-links">
-          <a href="/farming-community">Home</a>
-          <a href="/products">About Us</a>
-          <a href="/products">Products</a>
-          <a href="/farming-guide">Farming Guide</a>
-          <a href="/live-prices">Live Prices</a>
-          
-        </div>
-
-        {/* Right Section: Contact Us Button */}
-        <div className="contact-btn">
-          <a href="/contact">Contact Us</a>
-        </div>
-
-        {/* Toggle Button for Mobile */}
-        <div className="toggle-btn" onClick={toggleSidebar}>
-          ☰
-        </div>
-      </nav>
-
-      {/* Sidebar */}
-      <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-        <button className="close-btn" onClick={toggleSidebar}>
-          ✖
-        </button>
-        <ul className="sidebar-links">
-          <li>
-            <a href="/farming-community">Farming Community</a>
-          </li>
-          <li>
-            <a href="/farming-guide">Farming Guide</a>
-          </li>
-          <li>
-            <a href="/live-prices">Live Prices</a>
-          </li>
-          <li>
-            <a href="/products">Products</a>
-          </li>
-          <li>
-            <a href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default NavBar;

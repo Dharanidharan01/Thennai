@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHandshake, FaLightbulb, FaUsers, FaBalanceScale, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import NavBar from '../components/NavBar';
 
 // Import images
 import teamImg from "../assets/team.png";
@@ -26,8 +27,10 @@ const AboutUs = () => {
   ];
 
   return (
+   
     <div className="min-h-screen bg-black-50 font-['Space_Grotesk']">
       {/* Header Section */}
+      <NavBar/>
       <header className="bg-gradient-to-r from-[#4CAF50] to-green-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h1 

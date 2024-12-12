@@ -66,8 +66,8 @@ generations.`;
   }, [isContentInView]);
 
   return (
-    <section
-      className="flex flex-col lg:flex-row items-start justify-center p-4 lg:p-8 gap-8"
+    <section  
+      className="aboutus flex flex-col lg:flex-row items-start justify-center p-4 lg:p-8 gap-8"
       ref={contentRef}
     >
       {isContentInView && (
