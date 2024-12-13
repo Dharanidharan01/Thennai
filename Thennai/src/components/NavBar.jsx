@@ -48,7 +48,10 @@ const NavBar = () => {
 
                 <div className="nav-links">
                     <span onClick={() => handleNavigate('aboutus')}>About Us</span>
-                    <span onClick={() => handleNavigate('products')}>Products</span>
+                    
+                    <Link to="product-section" smooth={true} offset={-70} duration={500} className="nav-links">
+                        Products
+                    </Link>
                     <span onClick={() => handleNavigate('fg')}>Farming Guide</span>
                     <span onClick={() => handleNavigate('tamilnadu')}>Live Prices</span>
                 </div>

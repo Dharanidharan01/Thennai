@@ -66,6 +66,7 @@ const HomePageTamil = lazyLoadWithRetry(() => import('./language_pages/Tamil/pag
 const AboutUsTamil = lazyLoadWithRetry(() => import('./language_pages/Tamil/pages/AboutUsTamil'));
 const BenefitsOfCoconutTamil = lazyLoadWithRetry(() => import('./language_pages/Tamil/pages/BenefitsOfCoconutTamil'));
 const FarmingGuideTamil2 = lazyLoadWithRetry(() => import('./language_pages/Tamil/pages/FarmingGuideTamil2'));
+const ProductPageTamil = lazyLoadWithRetry(() => import('./language_pages/Tamil/pages/ProductPageTamil'));
 
 const App = () => {
   return (
@@ -86,6 +87,7 @@ const App = () => {
             <Route path="Aboutustamil" element={<AboutUsTamil />} />
             <Route path="BenefitsOfCoconutTamil" element={<BenefitsOfCoconutTamil />} />
             <Route path="fgt" element={<FarmingGuideTamil2 />} />
+            <Route path="ppt" element={<ProductPageTamil />} />
             {/* 404 fallback route */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

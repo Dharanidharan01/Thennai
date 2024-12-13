@@ -22,7 +22,7 @@ body {
 }
 
 .logo-image {
-  height: 50px;
+  height: 80px;
 }
 
 .nav-links {
@@ -37,8 +37,19 @@ body {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+.nav-links  {
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
 .nav-links span:hover {
+  color: #007A5C;
+  text-shadow: 0 0 8px rgba(163, 216, 165, 0.832);
+}
+.nav-links .nav-links:hover {
   color: #007A5C;
   text-shadow: 0 0 8px rgba(163, 216, 165, 0.832);
 }

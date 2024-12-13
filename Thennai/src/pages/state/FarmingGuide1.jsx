@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import html2pdf from 'html2pdf.js';
 import { Sprout, Droplets, Beaker, Bug, Scissors } from 'lucide-react';
 import logo from '../../assets/logo.png';
+import farmingGuidePDF from '../../assets/Farming guide.pdf'; // Import the pre-existing PDF file
 
 const FarmingGuide1 = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -20,6 +20,7 @@ const FarmingGuide1 = () => {
       details:
         "Proper land preparation is crucial for coconut farming success. The soil should be fertile, well-draining, and properly prepared to support healthy root development. Good drainage is essential as coconut palms are sensitive to waterlogging. The preparation of planting pits with the right soil mixture creates an ideal environment for initial root establishment and growth.",
     },
+    // Other steps here...
     {
       title: "Planting",
       icon: <Sprout className="w-8 h-8 text-[#0090E1]" />, // Reusing Sprout icon as Seedling is unavailable
@@ -87,16 +88,14 @@ const FarmingGuide1 = () => {
     },
   ];
 
+
+  
+
   const downloadPDF = () => {
-    const content = document.getElementById('farming-guide-content');
-    const opt = {
-      margin: 1,
-      filename: 'coconut-farming-guide.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
-    };
-    html2pdf().set(opt).from(content).save();
+    const link = document.createElement('a');
+    link.href = farmingGuidePDF; // Link to the pre-existing PDF file
+    link.download = 'coconut-farming-guide.pdf'; // The filename for the downloaded file
+    link.click();
   };
 
   return (
@@ -109,13 +108,13 @@ const FarmingGuide1 = () => {
           alt="Watermark"
           style={{
             position: 'absolute',
-            top: `${Math.random() * 100}%`, // Random vertical position
-            left: `${Math.random() * 100}%`, // Random horizontal position
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
             transform: 'translate(-50%, -50%)',
-            opacity: 0.1, // Adjust opacity as needed
-            zIndex: 0, // Ensure it stays behind the content
-            width: '10%', // Adjust size of the watermark logos
-            pointerEvents: 'none', // Prevent interaction with the watermark
+            opacity: 0.1,
+            zIndex: 0,
+            width: '10%',
+            pointerEvents: 'none',
           }}
         />
       ))}

@@ -8,6 +8,8 @@ import missionImg from "../../../assets/mi.png";
 import visionImg from "../../../assets/vi.png";
 import cofounder1Img from "../../../assets/co1.png";
 import cofounder2Img from "../../../assets/co2.png";
+import NavBarTamil from "../components/NavBarTamil";
+import ScrollToTopTamil from "../components/ScrollToTopTamil";
 
 const AboutUsTamil = () => {
   const coFounders = [
@@ -27,6 +29,8 @@ const AboutUsTamil = () => {
 
   return (
     <div className="min-h-screen bg-black-50 font-['Space_Grotesk']">
+      <NavBarTamil/>
+      <ScrollToTopTamil /> 
       {/* தலைப்பு பகுதி */}
       <header className="bg-gradient-to-r from-[#4CAF50] to-green-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">

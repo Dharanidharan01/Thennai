@@ -5,50 +5,47 @@ const FooterTamil = () => {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        {/* லோகோ மற்றும் பற்றி பகுதி */}
-        
-
-        {/* விரைவு இணைப்புகள் பகுதி */}
+        {/* Quick Links Section */}
         <div className="footer-section footer-links">
-          <h3>விரைவு இணைப்புகள்</h3>
+          <h3 style={{ color: "black" }}>விரைவு இணைப்புகள்</h3>
           <ul>
-            <li><a href="#about">எங்களைப் பற்றி</a></li>
-            <li><a href="#services">சேவைகள்</a></li>
-            <li><a href="#contact">தொடர்பு</a></li>
-            <li><a href="#careers">பணியிடம்</a></li>
-            <li><a href="#blog">பிளாக்</a></li>
+            <li><a href="/Aboutustamil">எங்களைப் பற்றி</a></li>
+            <li><a href="/services">சேவைகள்</a></li>
+            <li><a href="/careers">பணியிடம்</a></li>
+            <li><a href="https://thennai.medium.com/">பிளாக்</a></li>
           </ul>
         </div>
 
-        {/* தொடர்பு தகவல் பகுதி */}
-        <div className="footer-section footer-contact">
-          <h3>எங்களுடன் தொடர்பு கொள்ளவும்</h3>
-          <p>மின்னஞ்சல்: info@thennai.co.in</p>
-          <p>தொலைபேசி: +91 86088 25725</p>
-          <p>முகவரி: THENNAI TECH PRIVATE LIMITED
-85, பாலணியப்பன் தெரு,
-பொள்ளாட்சி, கோயம்புத்தூர் -642001</p>
+        {/* Contact Info Section */}
+        <div className="footer-section footer-contact"  style={{ color: "black" }}>
+          <h3 style={{ color: "black" }}>எங்களுடன் தொடர்பு கொள்ளவும்</h3>
+          <p ><a href="mailto:info@thennai.co.in" style={{ color: "black", textDecoration: "none" }}>மின்னஞ்சல்: info@thennai.co.in</a></p>
+          <p><a href="tel:+918608825725" style={{ color: "black", textDecoration: "none" }}>தொலைபேசி: +91 86088 25725</a></p>
+          <p style={{ color: "black" }}> முகவரி THENNAI TECH Pvt Ltd<br />
+            85, Palaniappan street, <br />
+            Pollachi, Coimbatore - 642001</p>
         </div>
 
-        {/* செய்திகள் சந்தா பகுதி */}
+        {/* Newsletter Subscription Section */}
         <div className="footer-section footer-newsletter">
           <h3>எங்கள் செய்தி பத்திரிகைக்கு சந்தா செய்யவும்</h3>
           <form className="newsletter-form">
             <input
               type="email"
-              placeholder="உங்கள் மின்னஞ்சலை உள்ளிடவும்"
+              placeholder="Enter your email"
               required
             />
-            <button type="submit">சந்தா செய்யவும்</button>
+            <button type="submit">Subscribe</button>
           </form>
         </div>
       </div>
 
-      {/* அடிக்கடி பகுதி */}
+      {/* Footer Bottom Section */}
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Thennai. எல்லா உரிமைகளும் பாதுகாக்கபட்டுள்ளன.</p>
+        <p>&copy; {new Date().getFullYear()} Thennai. All rights reserved.</p>
       </div>
     </footer>
   );
 };
+
 export default FooterTamil;

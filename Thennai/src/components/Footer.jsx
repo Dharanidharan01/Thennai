@@ -17,11 +17,11 @@ const Footer = () => {
         </div>
 
         {/* Contact Info Section */}
-        <div className="footer-section footer-contact">
+        <div className="footer-section footer-contact"  style={{ color: "black" }}>
           <h3 style={{ color: "black" }}>Contact Us</h3>
-          <p><a href="mailto:info@thennai.co.in" style={{ color: "white", textDecoration: "none" }}>Email: info@thennai.co.in</a></p>
-          <p><a href="tel:+918608825725" style={{ color: "white", textDecoration: "none" }}>Phone: +91 86088 25725</a></p>
-          <p style={{ color: "white" }}> Address: THENNAI TECH Pvt Ltd<br />
+          <p ><a href="mailto:info@thennai.co.in" style={{ color: "black", textDecoration: "none" }}>Email: info@thennai.co.in</a></p>
+          <p><a href="tel:+918608825725" style={{ color: "black", textDecoration: "none" }}>Phone: +91 86088 25725</a></p>
+          <p style={{ color: "black" }}> Address: THENNAI TECH Pvt Ltd<br />
             85, Palaniappan street, <br />
             Pollachi, Coimbatore - 642001</p>
         </div>
