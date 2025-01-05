@@ -53,5 +53,14 @@
   justify-content: center;
   align-items: center;
 }
+.container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* Include padding/border in width */
+}
+body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
 
 

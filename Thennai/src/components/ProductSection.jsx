@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../components/product.css";
 
 // Import the .webp image
@@ -20,6 +21,7 @@ const LoadingSpinner = () => (
 
 const ProductSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   // Handle scroll and detect if the section is visible
   const handleScroll = () => {
@@ -50,10 +52,9 @@ const ProductSection = () => {
       id="product-section"
       style={{
         display: "flex",
-        justifyContent: "space-around",
+        flexDirection: "column",
         alignItems: "center",
         padding: "60px 20px",
-        flexWrap: "wrap",
         textAlign: "center",
       }}
     >
@@ -76,76 +77,105 @@ const ProductSection = () => {
       </div>
 
       {/* Product Cards */}
-      {products.map((product, index) => (
-        <div
-          key={index}
-          className="product-card"
-          style={{
-            width: "300px",
-            height: "400px",
-            borderRadius: "10px",
-            backgroundColor: "#fff",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            textAlign: "center",
-            padding: "20px",
-            marginBottom: "20px",
-            transform: isVisible ? "translateX(0)" : "translateX(-200px)",
-            opacity: isVisible ? 1 : 0,
-            transition: "all 1s ease-in-out",
-            perspective: "1000px", // For 3D effect
-          }}
-        >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
+          gap: "20px",
+          width: "100%",
+        }}
+      >
+        {products.map((product, index) => (
           <div
+            key={index}
+            className="product-card"
             style={{
-              height: "200px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-              transformStyle: "preserve-3d", // Preserve 3D space for the flip
-              transition: "transform 0.6s", // Duration for flip effect
+              width: "300px",
+              height: "400px",
+              borderRadius: "10px",
+              backgroundColor: "#fff",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              textAlign: "center",
+              padding: "20px",
+              transform: isVisible ? "translateX(0)" : "translateX(-200px)",
+              opacity: isVisible ? 1 : 0,
+              transition: "all 1s ease-in-out",
+              perspective: "1000px", // For 3D effect
             }}
-            className="card-inner"
           >
-            {/* Front face */}
             <div
               style={{
-                position: "absolute",
-                backfaceVisibility: "hidden",
-                width: "100%",
-                height: "100%",
+                height: "200px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "relative",
+                transformStyle: "preserve-3d", // Preserve 3D space for the flip
+                transition: "transform 0.6s", // Duration for flip effect
               }}
+              className="card-inner"
             >
-              <LoadingSpinner />
-            </div>
-
-            {/* Back face with .webp image */}
-            <div
-              style={{
-                position: "absolute",
-                backfaceVisibility: "hidden",
-                width: "100%",
-                height: "100%",
-                transform: "rotateY(180deg)", // Rotate for flip effect
-              }}
-            >
-              <img
-                src={ProductGif}
-                alt="Product Animation"
+              {/* Front face */}
+              <div
                 style={{
+                  position: "absolute",
+                  backfaceVisibility: "hidden",
                   width: "100%",
                   height: "100%",
-                  borderRadius: "10px",
-                  objectFit: "cover",
                 }}
-              />
-            </div>
-          </div>
+              >
+                <LoadingSpinner />
+              </div>
 
-          <h3 style={{ fontSize: "24px", marginBottom: "10px" }}>{product}</h3>
-          <p style={{ color: "#555", fontSize: "16px" }}>Coming Soon</p>
-        </div>
-      ))}
+              {/* Back face with .webp image */}
+              <div
+                style={{
+                  position: "absolute",
+                  backfaceVisibility: "hidden",
+                  width: "100%",
+                  height: "100%",
+                  transform: "rotateY(180deg)", // Rotate for flip effect
+                }}
+              >
+                <img
+                  src={ProductGif}
+                  alt="Product Animation"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "10px",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            </div>
+
+            <h3 style={{ fontSize: "24px", marginBottom: "10px" }}>
+              {product}
+            </h3>
+            <p style={{ color: "#555", fontSize: "16px" }}>Coming Soon</p>
+          </div>
+        ))}
+      </div>
+
+      {/* View More Button */}
+      <button
+        onClick={() => navigate("/pp")}
+        style={{
+          marginTop: "20px",
+          padding: "10px 20px",
+          fontSize: "18px",
+          fontWeight: "bold",
+          color: "#fff",
+          backgroundColor: "#0090E1",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      >
+        View More
+      </button>
     </section>
   );
 };

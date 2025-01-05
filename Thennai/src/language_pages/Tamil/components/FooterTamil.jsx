@@ -20,7 +20,7 @@ const FooterTamil = () => {
         <div className="footer-section footer-contact"  style={{ color: "black" }}>
           <h3 style={{ color: "black" }}>எங்களுடன் தொடர்பு கொள்ளவும்</h3>
           <p ><a href="mailto:info@thennai.co.in" style={{ color: "black", textDecoration: "none" }}>மின்னஞ்சல்: info@thennai.co.in</a></p>
-          <p><a href="tel:+918608825725" style={{ color: "black", textDecoration: "none" }}>தொலைபேசி: +91 86088 25725</a></p>
+          <p><a href="tel:8608825725" style={{ color: "black", textDecoration: "none" }}>தொலைபேசி: +91 86088 25725</a></p>
           <p style={{ color: "black" }}> முகவரி THENNAI TECH Pvt Ltd<br />
             85, Palaniappan street, <br />
             Pollachi, Coimbatore - 642001</p>

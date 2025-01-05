@@ -33,7 +33,7 @@ const NavBarTamil = () => {
     };
 
     const handleLogoClick = () => {
-        navigate('/'); // Navigate to the home page
+        navigate('/homepagetamil'); // Navigate to the home page
     };
 
     return (

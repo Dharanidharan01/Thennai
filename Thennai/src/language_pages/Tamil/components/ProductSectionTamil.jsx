@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../components/product.css";
 
 // Import the .webp image
@@ -20,6 +21,7 @@ const LoadingSpinner = () => (
 
 const ProductSectionTamil = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   // ஸ்க்ரோல் கையாளல் மற்றும் பிரிவின் தோற்றம் கண்டறிதல்
   const handleScroll = () => {
@@ -40,7 +42,7 @@ const ProductSectionTamil = () => {
   }, []);
 
   const products = [
-    "பால்மு மரம் அறுவடை கருவி",
+    "தென்னை மரம் அறுவடை செய்யும் கருவி",
     "ஆக்ரோ-EV",
     "பொருள் 3",
   ];
@@ -50,10 +52,9 @@ const ProductSectionTamil = () => {
       id="product-section"
       style={{
         display: "flex",
-        justifyContent: "space-around",
+        flexDirection: "column",
         alignItems: "center",
         padding: "60px 20px",
-        flexWrap: "wrap",
         textAlign: "center",
       }}
     >
@@ -76,77 +77,108 @@ const ProductSectionTamil = () => {
       </div>
 
       {/* பொருள் அட்டைகள் */}
-      {products.map((product, index) => (
-        <div
-          key={index}
-          className="product-card"
-          style={{
-            width: "300px",
-            height: "400px",
-            borderRadius: "10px",
-            backgroundColor: "#fff",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            textAlign: "center",
-            padding: "20px",
-            marginBottom: "20px",
-            transform: isVisible ? "translateX(0)" : "translateX(-200px)",
-            opacity: isVisible ? 1 : 0,
-            transition: "all 1s ease-in-out",
-            perspective: "1000px", // 3D விளைவுக்கான
-          }}
-        >
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+          gap: "20px",
+          width: "100%",
+        }}
+      >
+        {products.map((product, index) => (
           <div
+            key={index}
+            className="product-card"
             style={{
-              height: "200px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "relative",
-              transformStyle: "preserve-3d", // 3D இடத்தை பராமரிக்க
-              transition: "transform 0.6s", // மாறுதல் விளைவுக்கான காலக்கெடு
+              width: "300px",
+              height: "400px",
+              borderRadius: "10px",
+              backgroundColor: "#fff",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              textAlign: "center",
+              padding: "20px",
+              marginBottom: "20px",
+              transform: isVisible ? "translateX(0)" : "translateX(-200px)",
+              opacity: isVisible ? 1 : 0,
+              transition: "all 1s ease-in-out",
+              perspective: "1000px", // 3D விளைவுக்கான
             }}
-            className="card-inner"
           >
-            {/* முன் முகம் */}
             <div
               style={{
-                position: "absolute",
-                backfaceVisibility: "hidden",
-                width: "100%",
-                height: "100%",
+                height: "200px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "relative",
+                transformStyle: "preserve-3d", // 3D இடத்தை பராமரிக்க
+                transition: "transform 0.6s", // மாறுதல் விளைவுக்கான காலக்கெடு
               }}
+              className="card-inner"
             >
-              <LoadingSpinner />
-            </div>
-
-            {/* பின்பக்கம் .webp படம் உடன் */}
-            <div
-              style={{
-                position: "absolute",
-                backfaceVisibility: "hidden",
-                width: "100%",
-                height: "100%",
-                transform: "rotateY(180deg)", // மாறுதல் விளைவுக்கான மாறுதல்
-              }}
-            >
-              <img
-                src={ProductGif}
-                alt="பொருள் அனிமேஷன்"
+              {/* முன் முகம் */}
+              <div
                 style={{
+                  position: "absolute",
+                  backfaceVisibility: "hidden",
                   width: "100%",
                   height: "100%",
-                  borderRadius: "10px",
-                  objectFit: "cover",
                 }}
-              />
-            </div>
-          </div>
+              >
+                <LoadingSpinner />
+              </div>
 
-          <h3 style={{ fontSize: "24px", marginBottom: "10px" }}>{product}</h3>
-          <p style={{ color: "#555", fontSize: "16px" }}>எதிர்வரும்</p>
-        </div>
-      ))}
+              {/* பின்பக்கம் .webp படம் உடன் */}
+              <div
+                style={{
+                  position: "absolute",
+                  backfaceVisibility: "hidden",
+                  width: "100%",
+                  height: "100%",
+                  transform: "rotateY(180deg)", // மாறுதல் விளைவுக்கான மாறுதல்
+                }}
+              >
+                <img
+                  src={ProductGif}
+                  alt="பொருள் அனிமேஷன்"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "10px",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            </div>
+
+            <h3 style={{ fontSize: "24px", marginBottom: "10px" }}>{product}</h3>
+            <p style={{ color: "#555", fontSize: "16px" }}>எதிர்வரும்</p>
+          </div>
+        ))}
+      </div>
+
+      {/* View More Button */}
+      <button
+        onClick={() => navigate("/ppt")} // Navigate to the 'ppt' page
+        style={{
+          marginTop: "40px",
+          padding: "10px 20px",
+          fontSize: "18px",
+          backgroundColor: "#0090E1",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+          transition: "background-color 0.3s ease",
+        }}
+        onMouseEnter={(e) => (e.target.style.backgroundColor = "#0078B6")}
+        onMouseLeave={(e) => (e.target.style.backgroundColor = "#0090E1")}
+      >
+        மேலும் பார்க்க
+      </button>
     </section>
   );
 };
+
 export default ProductSectionTamil;

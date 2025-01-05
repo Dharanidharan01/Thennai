@@ -37,7 +37,7 @@ const SuperHeaderTamil = () => {
           {/* Heading without Parallax */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold mb-4 md:mb-7 lg:mb-8">
             <span className="block md:inline"> </span>
-            <span className="text-orange-500 ">தென்னை விவசைகளுக்கு</span>
+            <span className="text-orange-500 ">தென்னை விவசாயிகளுக்கு</span>
             <span className="block md:inline" > அறிவார்ந்த </span>
             <span className="block mt-5 px-3">தீர்வுகள் மற்றும்</span>
             <span className="block mt-5 px-3">சமூக ஆதரவுடன் உதவுகிறோம்!</span>
