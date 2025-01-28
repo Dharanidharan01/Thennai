@@ -1,0 +1,121 @@
+/* General Container */
+.realtime-prices-container {
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  max-width: 100%; /* Allow the container to be flexible on smaller screens */
+  box-sizing: border-box; /* Include padding in total width calculation */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.realtime-header {
+  font-size: 32px;
+  color: #0090E1;
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Prevent text overflow */
+  overflow-wrap: break-word; /* Prevent text overflow */
+}
+
+.realtime-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  word-wrap: break-word; /* Prevent text overflow */
+  overflow-wrap: break-word; /* Prevent text overflow */
+}
+
+/* State Cards */
+.state-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.state-card {
+  display: flex; /* Added flexbox */
+  flex-direction: column; /* Arrange icon and text vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  background: #ffffff;
+  border: 2px solid #dcdcdc;
+  border-radius: 10px;
+  width: 150px;
+  height: 140px; /* Added height for better alignment */
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding is included in element width */
+}
+
+.state-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.state-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.state-name {
+  font-size: 14px;
+  color: #333;
+  word-wrap: break-word; /* Prevent text overflow */
+  overflow-wrap: break-word; /* Prevent text overflow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Adjust container padding and max width */
+  .realtime-prices-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  /* Header font size for mobile */
+  .realtime-header {
+    font-size: 28px;
+  }
+
+  /* Description font size for mobile */
+  .realtime-description {
+    font-size: 14px;
+  }
+
+  /* Adjust state card size */
+  .state-card {
+    width: 120px;
+    height: 130px;
+  }
+
+  /* Adjust state icon size */
+  .state-icon {
+    width: 50px;
+  }
+
+  /* Adjust state name font size */
+  .state-name {
+    font-size: 12px;
+  }
+
+  /* Ensure the cards remain in a row */
+  .state-cards-container {
+    gap: 15px;
+    flex-wrap: wrap; /* Ensure that the cards wrap but maintain horizontal layout */
+  }
+}
+/* State Name (for breaking long words) */
+.state-name {
+  font-size: 12px;
+  color: #333;
+  word-wrap: break-word; /* Ensures word breaks properly */
+  overflow-wrap: break-word; /* Ensures word breaks properly */
+  word-break: break-word; /* Forces the long words to break */
+}

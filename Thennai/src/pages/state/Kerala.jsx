@@ -4,11 +4,12 @@ import tamilNaduImage from "../../assets/kerala (1).png"; // Update the path as 
 
 const TamilNadu = () => {
   const priceHistory = [
-    { year: "2020", price: "₹25/kg" },
-    { year: "2021", price: "₹30/kg" },
-    { year: "2022", price: "₹35/kg" },
-    { year: "2023", price: "₹40/kg" },
-    { year: "2024", price: "₹45/kg" },
+    { year: "2019", price: "₹15-₹20" },
+    { year: "2020", price: "₹18-₹22" },
+    { year: "2021", price: "₹30-₹40" },
+    { year: "2022", price: "₹22-₹28" },
+    { year: "2023", price: "₹20-₹25" },
+    { year: "2024", price: "₹50-₹55" },
   ];
 
   return (

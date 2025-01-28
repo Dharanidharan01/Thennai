@@ -1,0 +1,11 @@
+.aboutus {
+    position: relative;
+    height: 100vh; /* or adjust based on the content */
+  }
+  
+  .sticky-content {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  

@@ -31,6 +31,8 @@ const Popup = () => {
             <button onClick={() => handleLanguageClick("Homepagetamil")}>தமிழ்</button>
             <button onClick={() => handleLanguageClick("malayalam")}>മലയാളം</button>
             <button onClick={() => handleLanguageClick("telugu")}>తెలుగు</button>
+            <button onClick={() => handleLanguageClick("telugu")}>తెలుగు</button>
+           
           </div>
         </div>
       </div>

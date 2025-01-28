@@ -22,9 +22,13 @@ const NavBarTamil = () => {
             navigate('/');
         } else if (language === 'tamil') {
             navigate('/homepagetamil');
+        } else if (language === 'malayalam') {
+            navigate('/Malayalam');
+        } else if (language === 'kannada') {
+            navigate('/HomepageKannada');
         }
         setLanguageDropdownOpen(false);
-        setSidebarOpen(false); // close the sectioh
+        setSidebarOpen(false); // close the section
     };
 
     const handleNavigate = (route) => {
@@ -33,7 +37,7 @@ const NavBarTamil = () => {
     };
 
     const handleLogoClick = () => {
-        navigate('/homepagetamil'); // Navigate to the home page
+        navigate('/homepagetamil'); // Navigate to the Tamil home page
     };
 
     return (
@@ -50,7 +54,7 @@ const NavBarTamil = () => {
                     <span onClick={() => handleNavigate('Aboutustamil')}>எங்களை பற்றி</span>
                     
                     <Link to="product-section" smooth={true} offset={-70} duration={500} className="nav-links">
-                    பொருட்கள்
+                        பொருட்கள்
                     </Link>
                     <span onClick={() => handleNavigate('fgt')}>விவசாய வழிகாட்டி</span>
                     <span onClick={() => handleNavigate('tamilnadu')}>செய்தி விலை</span>
@@ -67,6 +71,8 @@ const NavBarTamil = () => {
                                 <ul>
                                     <li onClick={() => handleLanguageChange('english')}>English</li>
                                     <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
+                                    <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
+                                    <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
                                 </ul>
                             </div>
                         )}
@@ -99,6 +105,8 @@ const NavBarTamil = () => {
                                 <ul>
                                     <li onClick={() => handleLanguageChange('english')}>English</li>
                                     <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
+                                    <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
+                                    <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
                                 </ul>
                             </div>
                         )}

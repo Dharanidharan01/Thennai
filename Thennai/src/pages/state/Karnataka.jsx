@@ -3,14 +3,14 @@ import "../state/TamilNadu.css";
 import tamilNaduImage from "../../assets/karnatakanew.png"; // Update the path as needed
 
 const Karnataka  = () => {
-    const priceHistory = [
-        { year: "2020", price: "₹25/kg" },
-        { year: "2021", price: "₹30/kg" },
-        { year: "2022", price: "₹35/kg" },
-        { year: "2023", price: "₹40/kg" },
-        { year: "2024", price: "₹45/kg" },
-      ];
-    
+  const priceHistory = [
+    { year: "2019", price: "₹12-₹18" },
+    { year: "2020", price: "₹15-₹20" },
+    { year: "2021", price: "₹25-₹35" },
+    { year: "2022", price: "₹20-₹26" },
+    { year: "2023", price: "₹18-₹22" },
+    { year: "2024", price: "₹45-₹50" },
+  ];
       return (
         <div className="tamilnadu-page">
           <h1 className="tamilnadu-heading">ಕರ್ನಾಟಕ ತೆಂಗಿನಕಾಯಿ ಬೆಲೆ</h1>

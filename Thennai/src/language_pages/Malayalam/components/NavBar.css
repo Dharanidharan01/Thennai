@@ -1,0 +1,236 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    height: 80px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links span {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .nav-links  {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links span:hover {
+    color: #007A5C;
+    text-shadow: 0 0 8px rgba(163, 216, 165, 0.832);
+  }
+  .nav-links .nav-links:hover {
+    color: #007A5C;
+    text-shadow: 0 0 8px rgba(163, 216, 165, 0.832);
+  }
+  
+  .contact-language {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .contact-btn {
+    text-decoration: none;
+    background-color: #007A5C;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: #005C47;
+  }
+  
+  .language-btn {
+    position: relative;
+    cursor: pointer;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .toggle-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+  }
+  
+  .sidebar.open {
+    right: 0;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-links li {
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .sidebar-links li:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
+  
+  .sidebar-language-btn {
+    cursor: pointer;
+    color: #007A5C;
+    font-weight: bold;
+  }
+  
+  .sidebar-dropdown-menu {
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .sidebar-dropdown-menu li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links, .contact-language {
+        display: none;
+    }
+  
+    .toggle-btn {
+        display: block;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+  }
+
+  /* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 100;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: #f4f4f4;
+}

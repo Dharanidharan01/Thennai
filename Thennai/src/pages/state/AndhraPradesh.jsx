@@ -3,13 +3,15 @@ import "../state/TamilNadu.css";
 import tamilNaduImage from "../../assets/anp.png"; // Update the path as needed
 
 const AndhraPradesh = () => {
-    const priceHistory = [
-      { year: "2020", price: "₹22/kg" },
-      { year: "2021", price: "₹28/kg" },
-      { year: "2022", price: "₹34/kg" },
-      { year: "2023", price: "₹38/kg" },
-      { year: "2024", price: "₹42/kg" },
-    ];
+  const priceHistory = [
+    { year: "2019", price: "₹14-₹19" },
+    { year: "2020", price: "₹17-₹22" },
+    { year: "2021", price: "₹28-₹38" },
+    { year: "2022", price: "₹21-₹27" },
+    { year: "2023", price: "₹19-₹23" },
+    { year: "2024", price: "₹48-₹52" },
+  ];
+
   
     return (
         <div className="tamilnadu-page">

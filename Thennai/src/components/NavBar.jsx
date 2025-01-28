@@ -22,9 +22,13 @@ const NavBar = () => {
             navigate('/');
         } else if (language === 'tamil') {
             navigate('/homepagetamil');
+        } else if (language === 'malayalam') {
+            navigate('/Malayalam');
+        } else if (language === 'kannada') {
+            navigate('/HomepageKannada');
         }
         setLanguageDropdownOpen(false);
-        setSidebarOpen(false); // close the sectioh
+        setSidebarOpen(false); // Close the section
     };
 
     const handleNavigate = (route) => {
@@ -67,6 +71,8 @@ const NavBar = () => {
                                 <ul>
                                     <li onClick={() => handleLanguageChange('english')}>English</li>
                                     <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
+                                    <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
+                                    <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
                                 </ul>
                             </div>
                         )}
@@ -99,6 +105,8 @@ const NavBar = () => {
                                 <ul>
                                     <li onClick={() => handleLanguageChange('english')}>English</li>
                                     <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
+                                    <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
+                                    <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
                                 </ul>
                             </div>
                         )}
