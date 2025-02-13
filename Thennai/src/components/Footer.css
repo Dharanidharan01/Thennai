@@ -1,12 +1,16 @@
 /* General Footer Styles */
 .footer-container {
-  background-color: #0090E1;
-  color: #fff;
+  /*background: url("../assets/footer.jpg") no-repeat center center;*/
+  background-color: #3588e7;
+  background-size: cover;
+  color: #000000;
   font-family: 'Space Grotesk', sans-serif;
-  padding: 40px 20px; /* Reduced padding for mobile */
+  padding: 40px 20px;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
+
 
 .footer-content {
   display: flex;

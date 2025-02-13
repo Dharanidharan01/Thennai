@@ -76,6 +76,11 @@ const HomePageKannada= lazyLoadWithRetry(() => import('./language_pages/Kannada/
 const AboutUsKannada= lazyLoadWithRetry(() => import('./language_pages/Kannada/pages/AboutUsKannada'));
 const BenefitsOfCoconutKannada= lazyLoadWithRetry(() => import('./language_pages/Kannada/pages/BenefitsOfCoconutKannada'));
 const FarmingGuideKannada= lazyLoadWithRetry(() => import('./language_pages/Kannada/pages/FarmingGuideKannada'));
+const HomePageHindi= lazyLoadWithRetry(() => import('./language_pages/Hindi/pages/HomePageHindi'));
+const AboutusHindi= lazyLoadWithRetry(() => import('./language_pages/Hindi/pages/AboutusHindi'));
+const BenefitsOfCoconutHindi= lazyLoadWithRetry(() => import('./language_pages/Hindi/pages/BenefitsOfCoconutHindi'));
+const FarmingGuideHindi= lazyLoadWithRetry(() => import('./language_pages/Hindi/pages/FarmingGuideHindi'));
+
 
 
 const App = () => {
@@ -99,7 +104,7 @@ const App = () => {
             <Route path="fgt" element={<FarmingGuideTamil2 />} />
             <Route path="ppt" element={<ProductPageTamil />} />
             <Route path="pp" element={<ProductPage/>} />
-            <Route path="Malayalam" element={<HomePageMalayalam/>} />
+          {/*  <Route path="Malayalam" element={<HomePageMalayalam/>} 
             <Route path="AboutUsMalayalam" element={<AboutUsPageMalayalam/>} />
             <Route path="FarmingGuideMalayalam" element={<FarmingGuideMalayalam/>} />
             <Route path="BenefitsOfCoconutMalayalam" element={<BenefitsOfCoconutMalayalam/>} />
@@ -107,6 +112,10 @@ const App = () => {
             <Route path="AboutUsKannada" element={<AboutUsKannada/>} />
             <Route path="BenefitsOfCoconutKannada" element={<BenefitsOfCoconutKannada/>} />
             <Route path="FarmingGuideKannada" element={<FarmingGuideKannada/>} />
+            <Route path="HomePageHindi" element={<HomePageHindi/>} />
+            <Route path="AboutusHindi" element={<AboutusHindi/>} />
+            <Route path="BenefitsOfCoconutHindi" element={<BenefitsOfCoconutHindi/>} />
+            <Route path="FarmingGuideHindi" element={<FarmingGuideHindi/>} />/>*/}
             {/* 404 fallback route */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
