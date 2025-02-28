@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import LoadingSpinner from './LoadingSpinner';
 import NotFoundPage from './NotFoundPage';
+import FallingCoconuts from './FallingCoconuts';
+
 
 // Error Boundary Component
 class ErrorBoundary extends React.Component {
@@ -49,6 +51,8 @@ const lazyLoadWithRetry = (componentImport) => {
       <Suspense fallback={<LoadingSpinner />}>
         <LazyComponent {...props} />
       </Suspense>
+      <FallingCoconuts />
+      
     </ErrorBoundary>
   );
 };
@@ -89,6 +93,7 @@ const App = () => {
      
       <ErrorBoundary>
         <Suspense fallback={<LoadingSpinner />}>
+        
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="tamilnadu" element={<TamilNadu />} />

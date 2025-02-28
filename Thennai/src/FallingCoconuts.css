@@ -1,0 +1,29 @@
+.coconut-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none; /* Prevents coconuts from interfering with clicks */
+  z-index: 9999; /* Ensures coconuts are on top of other content */
+}
+
+.coconut {
+  position: absolute;
+  width: 100px; /* Increased size (adjust as needed) */
+  height: auto;
+  animation: fall linear;
+  animation-fill-mode: forwards; /* Ensures coconuts stay at final position */
+}
+
+@keyframes fall {
+  0% {
+    top: -100px; /* Start above the screen, adjusted for larger size */
+    opacity: 1;
+  }
+  100% {
+    top: 100vh; /* Fall to the bottom */
+    opacity: 0.8; /* Slight fade as it falls */
+  }
+}
