@@ -40,9 +40,9 @@ const ProductSectionMalayalam = () => {
   }, []);
 
   const products = [
-    "പാൽമിനുസ वृക്ഷം തോട്ടം ഉപകരണം",
-    "ആഗ്രോ-ഇവി (പല വശമായ ഉപകരണം)",
-    "ഉൽപ്പന്നം 3",
+    "പാൽമിനസ് തോട്ട ഉപകരണം",
+    "ആഗ്രോ-ഇവി (പലവിധ ഉപകരണം)",
+    "ഉപകരണം 3",
   ];
 
   return (
@@ -67,11 +67,11 @@ const ProductSectionMalayalam = () => {
             color: "#0090E1",
           }}
         >
-          പ്രത്യേകിച്ചുള്ള ഉൽപ്പന്നങ്ങൾ
+          നമ്മുടെ പ്രത്യേക ഉപകരണങ്ങൾ
         </h2>
 
         <p style={{ fontSize: "18px", color: "#555" }}>
-          ഞങ്ങളുടെ വ്യാപകമായ തേങ്ങാനിർമ്മിത ഉൽപ്പന്നങ്ങൾ തിരയൂ
+          ഞങ്ങളുടെ തേങ്ങാ നിർമിത ഉപകരണങ്ങൾ കണ്ടെത്തൂ
         </p>
       </div>
 
@@ -143,7 +143,7 @@ const ProductSectionMalayalam = () => {
           </div>
 
           <h3 style={{ fontSize: "24px", marginBottom: "10px" }}>{product}</h3>
-          <p style={{ color: "#555", fontSize: "16px" }}> വേഗത്തിൽ വരുന്നു</p>
+          <p style={{ color: "#555", fontSize: "16px" }}>ഉടൻ ലഭ്യമാകും</p>
         </div>
       ))}
     </section>

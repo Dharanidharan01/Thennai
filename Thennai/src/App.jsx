@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import LoadingSpinner from './LoadingSpinner';
 import NotFoundPage from './NotFoundPage';
-import FallingCoconuts from './FallingCoconuts';
 
 
 // Error Boundary Component
@@ -51,7 +50,6 @@ const lazyLoadWithRetry = (componentImport) => {
       <Suspense fallback={<LoadingSpinner />}>
         <LazyComponent {...props} />
       </Suspense>
-      <FallingCoconuts />
       
     </ErrorBoundary>
   );
@@ -109,7 +107,7 @@ const App = () => {
             <Route path="fgt" element={<FarmingGuideTamil2 />} />
             <Route path="ppt" element={<ProductPageTamil />} />
             <Route path="pp" element={<ProductPage/>} />
-          {/*  <Route path="Malayalam" element={<HomePageMalayalam/>} 
+           <Route path="Malayalam" element={<HomePageMalayalam/>} />
             <Route path="AboutUsMalayalam" element={<AboutUsPageMalayalam/>} />
             <Route path="FarmingGuideMalayalam" element={<FarmingGuideMalayalam/>} />
             <Route path="BenefitsOfCoconutMalayalam" element={<BenefitsOfCoconutMalayalam/>} />
@@ -120,8 +118,8 @@ const App = () => {
             <Route path="HomePageHindi" element={<HomePageHindi/>} />
             <Route path="AboutusHindi" element={<AboutusHindi/>} />
             <Route path="BenefitsOfCoconutHindi" element={<BenefitsOfCoconutHindi/>} />
-            <Route path="FarmingGuideHindi" element={<FarmingGuideHindi/>} />/>*/}
-            {/* 404 fallback route */}
+            <Route path="FarmingGuideHindi" element={<FarmingGuideHindi/>} />
+            
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>

@@ -18,15 +18,15 @@ const NavBarHindi = () => {
     };
 
     const handleLanguageChange = (language) => {
-        if (language === 'english') {
-            navigate('/');
-        } else if (language === 'hindi') {
-            navigate('/homepagehindi');
-        } else if (language === 'malayalam') {
-            navigate('/Malayalam');
-        } else if (language === 'kannada') {
-            navigate('/HomepageKannada');
-        }
+        const routes = {
+            english: '/',
+            hindi: '/homepagehindi',
+            tamil: '/HomepageTamil',
+            malayalam: '/Malayalam',
+            kannada: '/HomepageKannada'
+        };
+
+        navigate(routes[language]);
         setLanguageDropdownOpen(false);
         setSidebarOpen(false);
     };
@@ -71,6 +71,7 @@ const NavBarHindi = () => {
                                 <ul>
                                     <li onClick={() => handleLanguageChange('english')}>English</li>
                                     <li onClick={() => handleLanguageChange('hindi')}>हिंदी</li>
+                                    <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
                                     <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
                                     <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
                                 </ul>
@@ -105,6 +106,7 @@ const NavBarHindi = () => {
                                 <ul>
                                     <li onClick={() => handleLanguageChange('english')}>English</li>
                                     <li onClick={() => handleLanguageChange('hindi')}>हिंदी</li>
+                                    <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
                                     <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
                                     <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
                                 </ul>

@@ -26,6 +26,8 @@ const NavBarTamil = () => {
             navigate('/Malayalam');
         } else if (language === 'kannada') {
             navigate('/HomepageKannada');
+        } else if (language === 'hindi') {
+            navigate('/HomepageHindi');
         }
         setLanguageDropdownOpen(false);
         setSidebarOpen(false); // close the section
@@ -44,7 +46,6 @@ const NavBarTamil = () => {
         <div>
             <nav className="navbar">
                 <div className="navbar-left">
-                    {/* Logo as a button for navigation */}
                     <button onClick={handleLogoClick} className="logo-button">
                         <img src={logo} alt="Logo" className="logo-image" />
                     </button>
@@ -73,6 +74,7 @@ const NavBarTamil = () => {
                                     <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
                                     <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
                                     <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
+                                    <li onClick={() => handleLanguageChange('hindi')}>हिन्दी</li>
                                 </ul>
                             </div>
                         )}
@@ -107,6 +109,7 @@ const NavBarTamil = () => {
                                     <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
                                     <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
                                     <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
+                                    <li onClick={() => handleLanguageChange('hindi')}>हिन्दी</li>
                                 </ul>
                             </div>
                         )}

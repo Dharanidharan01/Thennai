@@ -1,7 +1,6 @@
 import React from "react";
 import { FaHandshake, FaLightbulb, FaUsers, FaBalanceScale, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
-// import NavBar from '../components/NavBar';
 import NavBar from '../../Malayalam/components/NavBarMalayalam';
 
 // ചിത്രങ്ങൾ ഇറക്കുമതി ചെയ്യുക
@@ -15,23 +14,22 @@ const AboutUsMalayalam = () => {
   const coFounders = [
     {
       name: "കൽയാൻ പി ആർ",
-      designation: "കോ-ഫൗണ്ടർ - സിഇഒ",
+      designation: "സഹസ്ഥാപകൻ - സിഇഒ",
       linkedin: "https://www.linkedin.com/in/kalyan-p-r-b99a81223/",
       image: cofounder1Img
     },
     {
       name: "സുരേന്ദ്ര ബി",
-      designation: "കോ-ഫൗണ്ടർ - സിടിഒ",
+      designation: "സഹസ്ഥാപകൻ - സിടിഒ",
       linkedin: "https://www.linkedin.com/in/surendar1895/",
       image: cofounder2Img
     }
   ];
 
   return (
-   
     <div className="min-h-screen bg-black-50 font-['Space_Grotesk']">
       {/* ഹെഡർ സെക്ഷൻ */}
-      <NavBar/>
+      <NavBar />
       <header className="bg-gradient-to-r from-[#4CAF50] to-green-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h1 
@@ -40,7 +38,7 @@ const AboutUsMalayalam = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            ഞങ്ങളെപ്പറ്റി
+            ഞങ്ങളെ കുറിച്ച്
           </motion.h1>
           <motion.p 
             className="text-xl text-black"
@@ -53,7 +51,7 @@ const AboutUsMalayalam = () => {
         </div>
       </header>
 
-      {/* തെന്നൈ കുറിച്ച് സെക്ഷൻ */}
+      {/* തെന്നൈയെ കുറിച്ച് സെക്ഷൻ */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
@@ -63,7 +61,7 @@ const AboutUsMalayalam = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              തെന്നൈ കുറിച്ച്
+              തെന്നൈയെ കുറിച്ച്
             </motion.h2>
             <motion.p 
               className="text-lg text-gray-700 leading-relaxed"
@@ -71,12 +69,12 @@ const AboutUsMalayalam = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
             >
-              <strong>തെന്നൈ</strong> ൽ, നമുക്ക് തേങ്ങാകൃഷികാർക്ക് ആവശ്യമായ അറിവ്, ഉപകരണങ്ങൾ, സാമൂഹിക ബന്ധങ്ങൾ എന്നിവ നൽകാൻ we are committed to. 
-              ഞങ്ങളുടെ ദൗത്യം കൃഷി കൂടുതൽ എളുപ്പവും, ലാഭകരവുമായ, ദൈർഘ്യമുള്ളതുമായ രീതിയിൽ നടത്താൻ സഹായിക്കുന്ന വിഭവങ്ങളും നവീനമായ പരിഹാരങ്ങളും നൽകലാണ്.
+              <strong>തെന്നൈ</strong>യിൽ, തേങ്ങാ കർഷകർക്ക് ആവശ്യമായ അറിവ്, ഉപകരണങ്ങൾ, സമൂഹ ബന്ധങ്ങൾ എന്നിവ നൽകാൻ ഞങ്ങൾ പ്രതിജ്ഞാബദ്ധരാണ്. 
+              കൃഷിയെ എളുപ്പവും ലാഭകരവും സുസ്ഥിരവുമാക്കാൻ നവീന പരിഹാരങ്ങളും വിഭവങ്ങളും ഞങ്ങൾ ലക്ഷ്യമിടുന്നു.
             </motion.p>
           </div>
           <motion.div 
-            className="rounded-lg overflow-hidden "
+            className="rounded-lg overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -98,7 +96,7 @@ const AboutUsMalayalam = () => {
             <img src={missionImg} alt="ഞങ്ങളുടെ ദൗത്യം" className="w-full h-48 object-cover rounded-lg mb-6" />
             <h2 className="text-3xl font-bold mb-4 text-[#0090E1]">ഞങ്ങളുടെ ദൗത്യം</h2>
             <p className="text-gray-700">
-              <strong>തെന്നൈ</strong> ൽ, നാം ഫാമിങ്ങിന്റെ ദൃഢമായ പരിഷ്കാരം ലക്ഷ്യമിട്ട് പ്രവർത്തിക്കുന്നു, ഫലപ്രദതയും, ലാഭകരതയും, ദൈർഘ്യമുള്ളതുമായ രീതിയിൽ പുതിയ പരിഹാരങ്ങൾ അവതരിപ്പിച്ച്, കൃഷിയെ ഉയർത്തുന്നു.
+              <strong>തെന്നൈ</strong>യിൽ, കൃഷിയുടെ ശക്തമായ പരിവർത്തനം ഞങ്ങൾ ലക്ഷ്യമിടുന്നു. ഫലപ്രദവും ലാഭകരവും സുസ്ഥിരവുമായ പരിഹാരങ്ങൾ നൽകി കർഷകരെ ഉയർത്തുകയാണ് ഞങ്ങളുടെ ദൗത്യം.
             </p>
           </motion.div>
           <motion.div 
@@ -110,7 +108,7 @@ const AboutUsMalayalam = () => {
             <img src={visionImg} alt="ഞങ്ങളുടെ ദർശനം" className="w-full h-48 object-cover rounded-lg mb-6" />
             <h2 className="text-3xl font-bold mb-4 text-[#0090E1]">ഞങ്ങളുടെ ദർശനം</h2>
             <p className="text-gray-700">
-              സുസ്ഥിരമായ ഭാവിക്കായി സാങ്കേതികവിദ്യ അടിസ്ഥാനമാക്കിയുള്ള പരിഹാരങ്ങൾ വഴി കൃഷിയെ പരിഷ്കരിച്ച്, കൃഷി മുന്നോട്ട് നയിക്കുക.
+              സുസ്ഥിരമായ ഭാവിക്കായി സാങ്കേതികവിദ്യയിലൂടെ കൃഷിയെ പരിഷ്കരിച്ച് കർഷകരെ മുന്നോട്ട് നയിക്കുക.
             </p>
           </motion.div>
         </div>
@@ -119,7 +117,7 @@ const AboutUsMalayalam = () => {
       {/* മൂല്യങ്ങൾ സെക്ഷൻ */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#0090E1]">തെന്നൈയിലെ പ്രധാന മൂല്യങ്ങൾ</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-[#0090E1]">തെന്നൈയുടെ പ്രധാന മൂല്യങ്ങൾ</h2>
           <motion.div 
             className="grid md:grid-cols-4 gap-8"
             initial={{ opacity: 0 }}
@@ -127,10 +125,10 @@ const AboutUsMalayalam = () => {
             transition={{ duration: 1, delay: 0.5 }}
           >
             {[ 
-              { icon: FaBalanceScale, title: "സത്യസന്ധത", desc: "എല്ലാ പ്രവർത്തനങ്ങളിലും ഇപ്രകാരം, ധരിക്കുക, പരസ്പരം സഹകരിക്കുക." },
-              { icon: FaHandshake, title: "സഹകരണം", desc: "അറിവ് പങ്കുവെക്കുക, പ്രവർത്തനങ്ങൾ ത്തില്‍ ഒന്നിച്ച് മുന്നോട്ട് പോവുക." },
-              { icon: FaLightbulb, title: "നവീകരണം", desc: "നമുക്ക് പുത്തൻ സൃഷ്ടികൾ സാധ്യമാക്കുക." },
-              { icon: FaUsers, title: "ദായവുള്ളness", desc: "സ്വകാര്യ ജോലി കാര്യത്തിന് ബാധ്യസ്ഥത പ്രദാനം ചെയ്യുക." }
+              { icon: FaBalanceScale, title: "സത്യസന്ധത", desc: "എല്ലാ പ്രവർത്തനങ്ങളിലും സുതാര്യതയും നീതിയും പുലർത്തുക." },
+              { icon: FaHandshake, title: "സഹകരണം", desc: "അറിവ് പങ്കിട്ട് ഒന്നിച്ച് മുന്നോട്ട് പോകുക." },
+              { icon: FaLightbulb, title: "നവീകരണം", desc: "പുതിയ ആശയങ്ങൾ സാക്ഷാത്കരിക്കുക." },
+              { icon: FaUsers, title: "ദയയും ഉത്തരവാദിത്തവും", desc: "സമൂഹത്തോട് ഉത്തരവാദിത്തവും ദയയും കാണിക്കുക." }
             ].map((value, index) => (
               <motion.div 
                 key={index} 
@@ -149,7 +147,7 @@ const AboutUsMalayalam = () => {
       {/* കോ-ഫൗണ്ടർസ് സെക്ഷൻ */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#0090E1]">ഞങ്ങളുടെ ടീമിനെ കാണുക</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-[#0090E1]">ഞങ്ങളുടെ ടീമിനെ പരിചയപ്പെടുക</h2>
           <div className="grid md:grid-cols-2 gap-12">
             {coFounders.map((founder, index) => (
               <motion.div 
@@ -178,4 +176,4 @@ const AboutUsMalayalam = () => {
   );
 };
 
-export default AboutUsMalayalam;
+export default AboutUsMalayalam;  

@@ -5,12 +5,12 @@ const ContactUsMalayalam = () => {
   return (
     <div className="contactus-container">
       <div className="contactus-header">
-        <h2>ഞങ്ങളുമായി ബന്ധപ്പെടുക</h2>
-        <p>ഞങ്ങളിലേക്ക് എത്തുന്നതിന് ചുവടെയുള്ള ഫോം പൂരിപ്പിക്കുക!</p>
+        <h2>ഞങ്ങളോട് ബന്ധപ്പെടാം</h2>
+        <p>ഞങ്ങളുമായി ബന്ധപ്പെടാൻ താഴെയുള്ള ഫോം പൂരിപ്പിക്കൂ!</p>
       </div>
       <div className="contactus-content">
         <div className="contactus-image">
-          <img src={contactImage} alt="ഞങ്ങളുമായി ബന്ധപ്പെടുക" />
+          <img src={contactImage} alt="ഞങ്ങളോട് ബന്ധപ്പെടാം" />
         </div>
         <div className="google-form">
           <iframe
@@ -21,7 +21,7 @@ const ContactUsMalayalam = () => {
             marginWidth="0"
             title="Contact Us Form"
           >
-            ലോഡിംഗ്…
+            ലോഡ് ചെയ്യുന്നു…
           </iframe>
         </div>
       </div>

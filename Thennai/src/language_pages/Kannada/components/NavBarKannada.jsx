@@ -26,6 +26,8 @@ const NavBarKannada = () => {
             navigate('/homepagetamil');
         } else if (language === 'malayalam') {
             navigate('/homepagemalayalam');
+        } else if (language === 'hindi') {
+            navigate('/homepagehindi');
         }
         setLanguageDropdownOpen(false);
         setSidebarOpen(false); // Close dropdown and sidebar
@@ -55,8 +57,8 @@ const NavBarKannada = () => {
                     <Link to="product-section" smooth={true} offset={-70} duration={500} className="nav-links">
                         ಉತ್ಪನ್ನಗಳು
                     </Link>
-                    <span onClick={() => handleNavigate('BenefitsOfCoconutKannada')}>ಕೃಷಿ ಮಾರ್ಗದರ್ಶನ</span>
-                    <span onClick={() => handleNavigate('kar')}>ಸುದ್ದಿ ಬೆಲೆ</span>
+                    <span onClick={() => handleNavigate('BenefitsOfCoconutKannada')}>ಕೃಷಿ ಮಾರ್ಗದರ್ಶಿ</span>
+                    <span onClick={() => handleNavigate('kar')}>ಈಗಿನ ದರ</span>
                 </div>
 
                 <div className="contact-language">
@@ -72,6 +74,7 @@ const NavBarKannada = () => {
                                     <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
                                     <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
                                     <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
+                                    <li onClick={() => handleLanguageChange('hindi')}>हिन्दी</li>
                                 </ul>
                             </div>
                         )}
@@ -88,8 +91,8 @@ const NavBarKannada = () => {
                 <ul className="sidebar-links">
                     <li onClick={() => handleNavigate('AboutUsKannada')}>ನಮ್ಮ ಬಗ್ಗೆ</li>
                     <li onClick={() => handleNavigate('ppt')}>ಉತ್ಪನ್ನಗಳು</li>
-                    <li onClick={() => handleNavigate('BenefitsOfCoconutKannada')}>ಕೃಷಿ ಮಾರ್ಗದರ್ಶನ</li>
-                    <li onClick={() => handleNavigate('kar')}>ಸುದ್ದಿ ಬೆಲೆ</li>
+                    <li onClick={() => handleNavigate('BenefitsOfCoconutKannada')}>ಕೃಷಿ ಮಾರ್ಗದರ್ಶಿ</li>
+                    <li onClick={() => handleNavigate('kar')}>ಈಗಿನ ದರ</li>
                     <li>
                         <Link to="contactus-header" smooth={true} offset={-70} duration={500} onClick={toggleSidebar}>
                             ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ
@@ -106,6 +109,7 @@ const NavBarKannada = () => {
                                     <li onClick={() => handleLanguageChange('kannada')}>ಕನ್ನಡ</li>
                                     <li onClick={() => handleLanguageChange('tamil')}>தமிழ்</li>
                                     <li onClick={() => handleLanguageChange('malayalam')}>മലയാളം</li>
+                                    <li onClick={() => handleLanguageChange('hindi')}>हिन्दी</li>
                                 </ul>
                             </div>
                         )}

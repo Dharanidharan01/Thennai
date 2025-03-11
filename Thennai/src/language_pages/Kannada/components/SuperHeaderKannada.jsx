@@ -36,16 +36,13 @@ const SuperHeaderKannada = () => {
         <div className="px-4 py-8 md:py-0 md:px-0">
           {/* Heading without Parallax */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold mb-4 md:mb-7 lg:mb-8">
-            <span className="block md:inline"> </span>
-            <span className="text-orange-500">ತೇಂಗು ಕೃಷಿಕರಿಗೆ</span>
-            <span className="block md:inline"> ಬುದ್ಧಿವಂತ</span>
-            <span className="block mt-5 px-3">ಪರಿಹಾರಗಳು ಮತ್ತು</span>
-            <span className="block mt-5 px-3">ಸಮುದಾಯ ಬೆಂಬಲದೊಂದಿಗೆ ಸಹಾಯ ಮಾಡುತ್ತೇವೆ!</span>
+            <span className="block md:inline">ಸ್ಮಾರ್ಟ್ ಪರಿಹಾರಗಳು ಮತ್ತು ಸಮುದಾಯದ ಬೆಂಬಲದೊಂದಿಗೆ</span>
+            <span className="text-orange-500"> ತೆಂಗು ರೈತರ ಬೆಳವಣಿಗೆಗೆ ಸಹಾಯ ಮಾಡುವುದು ನಮ್ಮ ಉದ್ದೇಶ!</span>
           </h1>
 
           {/* Paragraph without Parallax */}
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 leading-relaxed max-w-[800px] mx-auto text-white">
-            ನಾವು ಕೃಷಿಕರಿಗೆ ಪ್ರಗತಿಪರ ಉಪಕರಣಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳನ್ನು ಒದಗಿಸುತ್ತೇವೆ. ಮಾರ್ಗದರ್ಶಕಗಳು, ಜೀವಂತ ಮಾರುಕಟ್ಟೆ ಬೆಲೆಗಳು ಮತ್ತು ಬೆಳವಣಿಗೆಗೆ ಸಹಾಯ ಮಾಡುವ ಸಮೃದ್ಧ ಸಮುದಾಯವನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.
+            ಅತ್ಯಾಧುನಿಕ ಪರಿಕರಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳೊಂದಿಗೆ ರೈತರನ್ನು ಸಬಲೀಕರಣಗೊಳಿಸುವುದು ನಮ್ಮ ಆಶಯ. ಮಾರ್ಗದರ್ಶಿಗಳು, ನೇರ ಮಾರುಕಟ್ಟೆ ಬೆಲೆಗಳು ಮತ್ತು ನೀವು ಬೆಳೆಯುವುದಕ್ಕೆ ಸಹಾಯ ಮಾಡಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಅಭಿವೃದ್ಧಿ ಹೊಂದುತ್ತಿರುವ ಸಮುದಾಯವನ್ನು ಅನ್ವೇಷಿಸಿ.
           </p>
 
           {/* Call to Action without Parallax */}
@@ -59,7 +56,7 @@ const SuperHeaderKannada = () => {
               });
             }}
           >
-            ಪ್ರಾರಂಭಿಸಿ
+            ಪ್ರಾರಂಭಿಸಲು ಒತ್ತಿ
           </a>
         </div>
       </div>

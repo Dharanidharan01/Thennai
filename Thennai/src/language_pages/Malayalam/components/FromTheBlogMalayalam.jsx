@@ -8,30 +8,29 @@ import coconutoilImage from '../../../assets/coconutoil.jpg';
 import coconutmilkImage from '../../../assets/coconutmilk.jpg'; 
 import coconutcareImage from '../../../assets/skincare.jpg'; 
 
-// കുറഞ്ഞ ഉള്ളടക്കമുള്ള സാമ്പിൾ ബ്ലോഗ് ഡാറ്റ
 const blogPosts = [
   {
-    title: "തേങ്ങാ വെള്ളം: പ്രകൃതിയുടെ ഏറ്റവും മികച്ച പാനീയം",
-    description: "തേങ്ങാ വെള്ളത്തിന്റെ അത്ഭുതകരമായ ആരോഗ്യ ഗുണങ്ങൾ കണ്ടെത്തുക, ഹൈഡ്രേഷൻ മുതൽ പ്രതിരോധ ശേഷി വർദ്ധിപ്പിക്കുക വരെ.",
-    image: coconutFoodImage, // ഇൻപോർട്ട് ചെയ്ത ചിത്രം ഉപയോഗിക്കുക
+    title: "തേങ്ങാവെള്ളം: പ്രകൃതിയുടെ മികച്ച പാനീയം",
+    description: "തേങ്ങാവെള്ളത്തിന്റെ അത്ഭുത ഗുണങ്ങൾ അറിയൂ, ജലാംശം നൽകുന്നത് മുതൽ പ്രതിരോധശേഷി വർദ്ധിപ്പിക്കുന്നത് വരെ.",
+    image: coconutFoodImage,
     link: "https://medium.com/@thennai/coconut-water-natures-best-drink-206d3b922e10",
   },
   {
-    title: "തേങ്ങാ എണ്ണ നിങ്ങളുടെ ചർമ്മാരോഗ്യത്തെ എങ്ങനെ പിന്തുണക്കുന്നു",
-    description: "തേങ്ങാ എണ്ണ പ്രകൃതികമായും യുവത്വം നിറഞ്ഞ ചർമ്മം നിലനിർത്താൻ എങ്ങനെ സഹായിക്കുന്നു എന്ന് പഠിക്കുക.",
-    image: coconutoilImage, // ഇൻപോർട്ട് ചെയ്ത ചിത്രം ഉപയോഗിക്കുക
+    title: "തേങ്ങാ എണ്ണ ത്വക്കിന്റെ ആരോഗ്യത്തെ എങ്ങനെ പിന്തുണയ്ക്കുന്നു",
+    description: "തേങ്ങാ എണ്ണ പ്രകൃതിദത്തമായി യുവത്വം നിറഞ്ഞ ത്വക്ക് നിലനിർത്താൻ എങ്ങനെ സഹായിക്കുന്നുവെന്ന് അറിയുക.",
+    image: coconutoilImage,
     link: "https://medium.com/@thennai/how-coconut-oil-supports-your-skin-health-6273573a2b21",
   },
   {
-    title: "തേങ്ങകളുടെ 5 അത്ഭുതകരമായ ആരോഗ്യ ഗുണങ്ങൾ",
-    description: "തേങ്ങകൾ നിരവധി വഴികളിൽ നിങ്ങളുടെ ആരോഗ്യം മെച്ചപ്പെടുത്താൻ സഹായിക്കുന്ന പ്രധാനം ആകുന്ന പോഷക ഘടകങ്ങൾ നിറഞ്ഞതാണ്.",
-    image: coconutcareImage, // ഇൻപോർട്ട് ചെയ്ത ചിത്രം ഉപയോഗിക്കുക
+    title: "തേങ്ങയുടെ 5 അത്ഭുതകരമായ ആരോഗ്യ ഗുണങ്ങൾ",
+    description: "തേങ്ങയിലെ പ്രധാന പോഷകങ്ങൾ നിന്റെ ആരോഗ്യം പലവിധത്തിൽ മെച്ചപ്പെടുത്താൻ എങ്ങനെ സഹായിക്കുന്നുവെന്ന് കണ്ടെത്തുക.",
+    image: coconutcareImage,
     link: "https://medium.com/@thennai/1-boosts-heart-health-f30b6d4fde51",
   },
   {
-    title: "പരമ്പരാഗത പാചകത്തിൽ തേങ്ങയുടെ വേഷം",
-    description: "ലോകമാകെയുള്ള വിവിധ പരമ്പരാഗത റെസിപ്പികളിൽ തേങ്ങ എങ്ങനെ ഉപയോഗിക്കുന്നു എന്ന് പരിശോധിക്കുക.",
-    image: coconutmilkImage, // ഇൻപോർട്ട് ചെയ്ത ചിത്രം ഉപയോഗിക്കുക
+    title: "പരമ്പരാഗത പാചകത്തിൽ തേങ്ങയുടെ പങ്ക്",
+    description: "ലോകത്തിന്റെ വിവിധ ഭാഗങ്ങളിലെ പരമ്പരാഗത വിഭവങ്ങളിൽ തേങ്ങ എങ്ങനെ ഉപയോഗിക്കുന്നുവെന്ന് പരിചയപ്പെടുക.",
+    image: coconutmilkImage,
     link: "https://medium.com/@thennai/the-role-of-coconut-in-traditional-cooking-dbad103763c4",
   }
 ];
@@ -39,8 +38,8 @@ const blogPosts = [
 const FromTheBlogMalayalam = () => {
   return (
     <div className="blog-container">
-      <h2 className="blog-title">ബ്ലോഗിൽ നിന്നുള്ളത്</h2>
-      <h3 className="blog-subtitle">വാർത്തകളും ലേഖനങ്ങളും</h3>
+      <h2 className="blog-title">ബ്ലോഗിൽ നിന്ന്</h2>
+      <h3 className="blog-subtitle">തേങ്ങയെക്കുറിച്ചുള്ള വാർത്തകളും ലേഖനങ്ങളും</h3>
       <div className="blog-posts">
         {blogPosts.map((post, index) => (
           <motion.div

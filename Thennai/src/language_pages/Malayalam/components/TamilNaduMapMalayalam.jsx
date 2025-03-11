@@ -10,10 +10,10 @@ const TamilNaduMapMalayalam = () => {
   const navigate = useNavigate(); // നാവിഗേഷൻ ആരംഭിക്കുക
 
   const states = [
-    { name: "താമിഴ്‌നാട്", image: tamilNaduImage, route: "/tamilnadu" }, // തമിഴ്നാട് റോട്ട് ചേർക്കുക
-    { name: "കേരളം", image: keralaImage , route: "/kerala" },
-    { name: "കർണാടക", image: karnatakaImage , route: "/kar" },
-    { name: "ആന്ധ്രാപ്രദേശ്", image: andhraImage, route: "/ap"  },
+    { name: "തമിഴ്നാട്", image: tamilNaduImage, route: "/tamilnadu" },
+    { name: "കേരളം", image: keralaImage, route: "/kerala" },
+    { name: "കർണാടക", image: karnatakaImage, route: "/karnataka" },
+    { name: "ആന്ധ്രാപ്രദേശ്", image: andhraImage, route: "/andhra-pradesh" },
   ];
 
   const handleCardClick = (route) => {
@@ -22,9 +22,9 @@ const TamilNaduMapMalayalam = () => {
 
   return (
     <div className="realtime-prices-container">
-      <h1 className="realtime-header">ഇന്ത്യയിൽ തേങ്ങയുടെ യഥാർത്ഥ വിലകൾ</h1>
+      <h1 className="realtime-header">ഇന്ത്യയിലെ തേങ്ങയുടെ തത്സമയ മാർക്കറ്റ് വിലകൾ</h1>
       <p className="realtime-description">
-        ഇന്ത്യയിലെ പ്രധാന തേങ്ങ വളർത്തുന്ന സംസ്ഥാനങ്ങളിൽ പുതുതായി അപ്ഡേറ്റ് ചെയ്യപ്പെട്ട തേങ്ങ വിലകൾ അറിയൂ.
+        ഇന്ത്യയിലെ പ്രധാന തേങ്ങാ ഉൽപ്പാദന സംസ്ഥാനങ്ങളിലെ പുതിയ മാർക്കറ്റ് വിലകൾ കർഷകർക്കായി അറിയാം.
       </p>
       <div className="state-cards-container">
         {states.map((state, index) => (
